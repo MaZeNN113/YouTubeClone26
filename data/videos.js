@@ -64,7 +64,7 @@ export const videos = [
     title: 'How To Become Disgustingly Self-Disciplined',
     views: 97000,
     channelName: 'Dan Koe Talks',
-    channelImage: 'images/channels/dad-koe.jpg',
+    channelImage: 'images/channels/dan-koe.jpg',
     thumbnail: 'images/videos/video3.jpg',
     uploadedAt: '2026-09-27T18:45:40Z',
     videoTime: '26:02',
@@ -465,7 +465,7 @@ export const videos = [
     title: 'رحلة البحث عن أسامة بن لادن',
     views: 7100000,
     channelName: 'Hamza Abdrzaq',
-    channelImage: 'images/channels/hamza.jpg',
+    channelImage: 'images/channels/hamzaabdrzaq.jpg',
     thumbnail: 'images/videos/video17.jpg',
     uploadedAt: '2023-09-12T13:57:05Z',
     videoTime: '19:30',
@@ -1710,7 +1710,7 @@ export function calculateDate(uploadedAt) {
 
 export async function fetchVideoTime(videoId) {
   try {
-    const apiKey = process.env.API_KEY;
+    const apiKey = 'AIzaSyAtm0I6VOIUXjS_o4WLZKcW0OvMf4pgjaI';
     const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`;
 
     const response = await fetch(url);
