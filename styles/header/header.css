@@ -1,0 +1,457 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(15px);
+  position: fixed;
+  height: 5rem;
+  padding: 0 1.25rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  transition: transform 0.3s ease;
+}
+
+/* ============================= */
+
+.left-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-icon {
+  color: #e3e3e3;
+  margin-top: 3px;
+  font-size: 26px;
+  background-color: transparent;
+  border-radius: 35px;
+  padding: 10px 10px 10px 10px;
+  transition: background-color 0.3s;
+}
+
+.menu-icon:hover {
+  background-color: rgba(69,69,69,0.6);
+}
+
+/*YouTube header*/
+.youtube-header-icon {
+  width: 120px;
+}
+
+
+/* ============================= */
+
+.mid-section {
+  display: flex;
+  align-items: center;
+  flex:1;
+  min-width: 0;
+  max-width: 40rem;
+}
+
+/* Here I had to put most effects to the search-box-container so I can have the actual YouTube search box, which have the Ask YouTube button and Search button inside */
+
+.search-box-container {
+  display: flex;
+  flex:1;
+  min-width: 0;
+  position: relative;
+  background-color: transparent;
+  border: solid #454545 1px;
+  border-radius: 30px;
+  padding: 2px 5px;
+  margin: 10px;
+  height: 50px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #e3e3e3;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.search-box-container:hover {
+  background-color: rgba(63,63,63,0.20) ;
+}
+
+.ai-ask-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-ask-icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  fill: #e3e3e3;
+  margin-right: 10px;
+}
+
+.ai-ask-button {
+  background-color: #2E2E2E;
+  border: none;
+  border-radius: 35px;
+  outline: none;
+  color: #f0f0f0;
+  padding: 5px 15px;
+  margin: 5px 2px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: inset 0px 1px 0px rgba(90, 89, 89, 0.6);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ai-ask-button:hover {
+ background-color: rgba(121, 121, 121, 0.6);
+}
+
+.search-box-icon {
+  fill: #f0f0f0;
+  height: 24px; 
+  width: 24px;
+  margin-top: -1px;
+  margin-left: -4px;
+}
+
+.search-box-button {
+  background-color: #2e2e2e;
+  border: none;
+  box-shadow: inset 0px 1px 0px rgba(90, 89, 89, 0.6);
+  border-radius: 35px;
+  color: #f0f0f0;
+  width: 35px;
+  padding: 5px 10px 6px 10px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.search-box-button:hover {
+ background-color: rgba(121, 121, 121, 0.6);
+}
+
+.mic-search-icon {
+  fill: #f0f0f0;
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+.mic-search-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #2e2e2e;
+  border: none;
+  box-shadow: inset 0px 1px 0px rgba(90, 89, 89, 0.6);
+  border-radius: 35px;
+  color: #f0f0f0;
+  padding: 5px 10px 6px 10px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.mic-search-button:hover {
+ background-color: rgba(121, 121, 121, 0.6);
+}
+
+.mic-search-button .tooltip {
+  position: absolute;
+  background-color: rgb(90, 90, 90);
+  color: #e3e3e3;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 5px;
+  bottom: -46px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.mic-search-button:hover .tooltip {
+  opacity: 1;
+}
+
+/* ============================= */
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e3e3e3;
+  flex-shrink: 0;
+}
+
+.create-icon {
+  color: #e3e3e3;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.create-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2E2E2E;
+  border: none;
+  border-radius: 35px;
+  outline: none;
+  color: #f0f0f0;
+  padding: 10px 20px 10px 10px;
+  margin: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: inset 0px 1px 0px rgba(90, 89, 89, 0.6);
+  cursor: pointer;
+}
+
+.create-button:hover {
+ background-color: rgba(121, 121, 121, 0.6);
+}
+
+.notifications-icon {
+  height: 2.8125rem;
+  width: 2.8125rem;
+  fill: #e3e3e3;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.notifications-icon:hover {
+  background-color: rgba(69,69,69,0.6);
+}
+
+.notifications-container {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 70px;
+}
+
+.notifications-container .tooltip {
+  position: absolute;
+  background-color: rgb(90, 90, 90);
+  color: #e3e3e3;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 5px;
+  bottom: -46px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.notifications-container:hover .tooltip {
+  opacity: 1;
+}
+
+.account-icon {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.account-container {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.account-container .tooltip {
+  position: absolute;
+  background-color: rgb(90, 90, 90);
+  color: #e3e3e3;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 5px;
+  bottom: -42px;
+  right: -10px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.account-container:hover .tooltip {
+  opacity: 1;
+}
+
+/* ======================== */
+/* ======================== */
+/* === Responsiveness === */
+/* ======================== */
+/* ======================== */
+
+@media (max-width:1024px) {
+  .ai-ask-text {
+    display: none;
+  }
+
+  .search-box {
+    width: 300px;
+  }
+
+  .create-button span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+  
+  header {
+    padding-left: 0.625rem;
+  }
+
+  .hide-header {
+    transform: translateY(-100%);
+  }
+
+  .topic-recommendations {
+    left: 0;
+  }
+
+  .hide-topics {
+    transform: translateY(-220%);
+  }
+
+  .youtube-header-icon {
+    width: 150px;
+  }
+
+  .menu-icon,
+  .ai-ask-button,
+  .ai-ask-text,
+  .mic-search-button,
+  .create-button {
+    display: none;
+  }
+
+  .search-box {
+    width: 100px;
+  }
+
+  .create-button span,
+  .create-button {
+    font-size: 0;
+  }
+
+  .search-box-container {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; 
+  }
+
+  .search-box-container:hover {
+    background-color: transparent;
+  }
+
+
+  .search-box-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .search-box-button:hover {
+    background-color: rgba(69, 69, 69, 0.6);
+  }
+
+  .notifications-container .tooltip,
+  .account-container .tooltip {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@media (max-width:480px) {
+  header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    justify-content: center;
+  }
+
+  .youtube-header-icon {
+    width: 150px;
+  }
+
+  .search-box-container {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .search-box-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: none;
+  }
+
+  .search-box-button:hover {
+    background-color: transparent;
+  }
+
+  .search-box-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 2;
+    fill: #e3e3e3;
+  }
+
+  .search-box,
+  .ai-ask-button,
+  .create-button,
+  .notifications-container,
+  .account-container {
+    display: none;
+  }
+
+  .mid-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}

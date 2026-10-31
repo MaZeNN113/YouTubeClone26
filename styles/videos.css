@@ -1,0 +1,125 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  column-gap: 20px;
+  gap: 2rem 1rem;
+  row-gap: 3.125rem;
+  padding: 1.5rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+/* This below contains the thumbnail + all the rest info, like channel picture, title and stats */
+.video-preview {
+  display: block;
+  padding: 0.9375rem;
+  border-radius: 20px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+
+.video-preview:hover {
+  background-color: rgba(121, 121, 121, 0.45);
+}
+
+/* This below contains the thumbnail image */
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  margin-bottom: 1.25rem;
+}
+
+.thumbnail-container {
+  position: relative;
+  display: block;
+}
+
+.video-time {
+  position: absolute;
+  color: white;
+  background-color: hsla(0, 0%, 0%, 0.55);
+  backdrop-filter: blur(5px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 5px 7px;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* This below contains 'ALL' the nested layouts such as the channel picture, video title, and the stats together with their nested layouts. I've created it to make them vertically centered */
+.info-container {
+  display: flex;
+  gap: 0.625rem;
+  vertical-align: top;
+}
+
+/* These 2 below: 1st one is for the channel picture itself as an image, while the 2nd one is for the container of the image block to make it inline with the content */
+.channel-pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.channel-pic-container {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.625rem;
+  flex-shrink: 0;
+}
+
+/* Video Title */
+.video-title {
+  color: #e3e3e3;
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+
+/* Video Stats includes the channel name, video view and when it had been published */
+.video-stats {
+  color: #9a9a9a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+/* video-info covers all the 'video-title','video-stats' and 'three-dots' so they can appear together */
+.video-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.video-title-and-stats {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== */
+/* ==== DOTS BUTTON ==== */
+/* ===================== */
+
+.dots-icon {
+  font-size: 1.5rem;
+  color: #e3e3e3;
+}
+
+.dots-button {
+  background-color: transparent;
+  border: none;
+}
+
+.js-not-found-enabled {
+  padding-top: 50px;
+  font-size: 2.3rem;
+  color: #e3e3e3;
+}

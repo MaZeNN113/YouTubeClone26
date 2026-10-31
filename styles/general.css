@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  padding-top: 110px;
+  padding-left: 90px;
+  background-color: #0f0f0f;
+}
+
+
+/* For making all hyperlinks on subscription channels appear without the underline purple text */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-left: 0;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width:480px) {
+  body {
+    padding-left: 0;
+    padding-top: 80px;
+  }
+}
