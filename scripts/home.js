@@ -1,13 +1,20 @@
-import { videos, formatViews } from '../data/videos.js';
+import { videos, formatViews, fetchVideoTime, calculateDate } from '../data/videos.js';
 
-export function generateVideos() {
+export async function generateVideos() {
+  const shuffledVideos = [...videos];
+  
+  shuffledVideos.sort(() => Math.random() - 0.5);
+  
   let homeHTML = '';
+  
+  /* const uploadedDates = await Promise.all(shuffledVideos.map((video) => fetchVideoTime(video.id))); */
 
-  videos.forEach((video) => {
+  shuffledVideos.forEach((video, index) => {
     const html = `
     <div class="video-preview">
-      <a href="${video.videoUrl}">
+      <a href="${video.videoUrl}" class="thumbnail-container">
         <img class="thumbnail" src="${video.thumbnail}">
+        <div class="video-time">${video.videoTime}</div>
       </a>
     
       <div class="info-container">
@@ -22,7 +29,7 @@ export function generateVideos() {
             </p>
 
             <p class="video-stats">
-              ${video.channelName} &#183; ${formatViews(video.views)} views &#183; ${video.uploadedAt}
+              ${video.channelName} &#183; ${formatViews(video.views)} views &#183; ${calculateDate(video.uploadedAt)} ago
             </p>
           </div>
 
@@ -37,15 +44,20 @@ export function generateVideos() {
   `;
 
     homeHTML += html;
-
   });
   document.querySelector('main').innerHTML = homeHTML;
 }
 
-export function generateTopics(topicsArray) {
+export async function generateTopics(topicsArray) {
+  const shuffledVideos = [...topicsArray];
+
+  shuffledVideos.sort(() => Math.random() - 0.5);
+
+  /* const uploadedDates = await Promise.all(shuffledVideos.map(video => fetchVideoTime(video.id))) */
+
   let homeHTML = '';
 
-  topicsArray.forEach((video) => {
+  shuffledVideos.forEach((video) => {
     const html = `
       <div class="video-preview">
         <a href="${video.videoUrl}">
@@ -64,7 +76,7 @@ export function generateTopics(topicsArray) {
               </p>
   
               <p class="video-stats">
-                ${video.channelName} &#183; ${formatViews(video.views)} views &#183; ${video.uploadedAt}
+                ${video.channelName} &#183; ${formatViews(video.views)} views &#183; ${calculateDate(video.uploadedAt)} ago
               </p>
             </div>
   
@@ -79,7 +91,6 @@ export function generateTopics(topicsArray) {
     `;
 
     homeHTML += html;
-
   });
   document.querySelector('main').innerHTML = homeHTML;
 }
