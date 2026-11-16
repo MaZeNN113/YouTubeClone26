@@ -4,11 +4,11 @@ import VideoCard from './VideoCard.jsx';
 
 function VideoGrid({ video }) {
   return (
-    <>
+    <main>
       {videos.map((video) => {
         return <VideoCard key={video.id} video={video} />;
       })}
-    </>
+    </main>
   );
 }
 
