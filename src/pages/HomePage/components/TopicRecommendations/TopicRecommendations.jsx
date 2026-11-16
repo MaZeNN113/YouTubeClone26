@@ -1,9 +1,9 @@
 import { recommendations } from '../../../../data/recommendations.js';
-import './TopicRecommendations.css'
+import './TopicRecommendations.css';
 
 function TopicRecommendations() {
   return (
-    <>
+    <div className='topic-recommendations'>
       <div className='topic-link'>
         <button className='ai-topic-button'>
           <div className='ai-topic-container topics'>
@@ -17,18 +17,17 @@ function TopicRecommendations() {
             <div>Your custom feed</div>
           </div>
         </button>
-
-        {recommendations.map((recommendation) => {
-          return (
-            <div className='topic-link'>
-              <div className={`${recommendation.id}-topic topics`}>
-                {recommendation.name}
-              </div>
-            </div>
-          );
-        })}
       </div>
-    </>
+      {recommendations.map((recommendation) => {
+        return (
+          <div className='topic-link'>
+            <div className={`${recommendation.id}-topic topics`}>
+              {recommendation.name}
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
