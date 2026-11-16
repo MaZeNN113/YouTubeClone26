@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar.jsx';
 function HomePage() {
   return (
     <>
+      <title>YouTube</title>
       <Header />
       <TopicRecommendations />
       <Sidebar />
