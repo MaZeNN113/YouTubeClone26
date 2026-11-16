@@ -6,7 +6,7 @@ function VideoGrid({ video }) {
   return (
     <>
       {videos.map((video) => {
-        <VideoCard key={video.id} video={video} />;
+        return <VideoCard key={video.id} video={video} />;
       })}
     </>
   );
