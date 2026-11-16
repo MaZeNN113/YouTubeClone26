@@ -1,8 +1,14 @@
-import "./HomePage.css";
-import VideoGrid from "./components/VideoGrid/VideoGrid.jsx";
+import './HomePage.css';
+import TopicRecommendations from './components/TopicRecommendations/TopicRecommendations.jsx';
+import VideoGrid from './components/VideoGrid/VideoGrid.jsx';
 
 function HomePage() {
-  return <VideoGrid />
+  return (
+    <>
+      <TopicRecommendations />
+      <VideoGrid />
+    </>
+  );
 }
 
 export default HomePage;
