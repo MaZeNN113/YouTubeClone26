@@ -21,7 +21,7 @@ function TopicRecommendations() {
       {recommendations.map((recommendation) => {
         return (
           <div className='topic-link'>
-            <div className={`${recommendation.id}-topic topics`}>
+            <div key={recommendation.id} className={`${recommendation.id}-topic topics`}>
               {recommendation.name}
             </div>
           </div>
