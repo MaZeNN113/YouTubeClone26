@@ -1,0 +1,72 @@
+/* ============================= */
+/* ============================= */
+/* === Recommendation Header === */
+/* ============================= */
+/* ============================= */
+
+.topic-recommendations {
+  display: flex;
+  background-color: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(15px);
+  align-items: center;
+  position: fixed;
+  height: 3.4375rem;
+  padding: 0 15px;
+  top: 70px;
+  right: 0;
+  left: 80px;
+  overflow: scroll;
+  scrollbar-width: none;
+  border-top: none;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.ai-topic-container {
+  display: flex;
+  padding: 10px;
+  align-items:center;
+  justify-content: space-between;
+  white-space: nowrap;
+  width: 140px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.ai-topic-button {
+  background-color: transparent;
+  border: solid 0px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #e3e3e3;
+  border-radius: 5px;
+}
+
+.ai-topic-icon {
+  width: 15px;
+  fill: #e3e3e3;
+}
+
+.topics {
+  border: solid 1px #e3e3e3;
+  color: #e3e3e3;
+  padding: 5px 10px 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Changing the colors when 
+the topic button is pressed */
+.js-topic-enabled {
+  background-color: #e3e3e3;
+  color: black;
+}
+
+.ai-topic-button:has(.js-topic-enabled) 
+  .ai-topic-icon {
+    fill: black;
+  }
