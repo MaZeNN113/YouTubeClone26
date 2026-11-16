@@ -1,4 +1,5 @@
 import { recommendations } from '../../../../data/recommendations.js';
+import TopicCard from './TopicCard.jsx';
 import './TopicRecommendations.css';
 
 function TopicRecommendations() {
@@ -18,13 +19,10 @@ function TopicRecommendations() {
           </div>
         </button>
       </div>
+
       {recommendations.map((recommendation) => {
         return (
-          <div className='topic-link'>
-            <div key={recommendation.id} className={`${recommendation.id}-topic topics`}>
-              {recommendation.name}
-            </div>
-          </div>
+          <TopicCard key={recommendation.id} recommendation={recommendation} />
         );
       })}
     </div>
