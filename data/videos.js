@@ -1710,7 +1710,7 @@ export function calculateDate(uploadedAt) {
 
 export async function fetchVideoTime(videoId) {
   try {
-    const apiKey = 'AIzaSyAtm0I6VOIUXjS_o4WLZKcW0OvMf4pgjaI';
+    const apiKey = 'API_KEY';
     const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`;
 
     const response = await fetch(url);
