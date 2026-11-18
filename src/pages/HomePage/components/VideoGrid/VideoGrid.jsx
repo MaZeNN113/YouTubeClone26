@@ -3,15 +3,19 @@ import VideoCard from './VideoCard.jsx';
 
 function VideoGrid({ videos }) {
   return (
-    <main>
+    <>
       {videos.length <= 0 ? (
-        <h1 style={{ color: '#e3e3e3' }}>No videos found</h1>
+        <div className='not-found'>
+          <h1 className='not-found-text'> No videos found </h1>
+        </div>
       ) : (
-        videos.map((video) => {
-          return <VideoCard key={video.id} video={video} />;
-        })
+        <main>
+          {videos.map((video) => {
+            return <VideoCard key={video.id} video={video} />;
+          })}
+        </main>
       )}
-    </main>
+    </>
   );
 }
 
