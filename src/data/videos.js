@@ -134,12 +134,10 @@ export const videos = [
       'marques brownlee',
       'internet',
       'tech creator',
-      'online video',
       'content creation',
       'digital platforms',
       'youtube creators',
       'technology news',
-      'online business'
     ],
     videoUrl: 'https://youtu.be/e1q-TuHdc4Y',
     channelUrl: 'https://www.youtube.com/@mkbhd'
@@ -308,7 +306,6 @@ export const videos = [
       'video ideas',
       'youtube strategy',
       'going viral',
-      'online creator',
       'content strategy',
       'internet entertainment',
       'video production'
@@ -569,7 +566,6 @@ export const videos = [
       'خناقات',
       'جدل',
       'مناقشة',
-      'online culture',
       'internet discussion',
       'arabic podcast',
       'social media debate'
