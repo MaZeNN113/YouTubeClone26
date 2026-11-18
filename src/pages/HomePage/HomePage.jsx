@@ -8,12 +8,16 @@ import { videos } from '../../data/videos.js';
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [draftQuery, setDraftQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([...videos]);
 
   function handleInput(event) {
-    setSearchQuery(event.target.value);
+    setDraftQuery(event.target.value);
+  }
 
-    const newSearch = searchQuery.trim().toLowerCase().split(' ');
+  function searchVideos() {
+    setSearchQuery(draftQuery);
+    const newSearch = draftQuery.trim().toLowerCase().split(' ');
 
     setFilteredVideos(
       videos.filter((video) => {
@@ -33,7 +37,7 @@ function HomePage() {
   return (
     <>
       <title>YouTube</title>
-      <Header handleInput={handleInput} />
+      <Header searchVideos={searchVideos} handleInput={handleInput} />
       <TopicRecommendations />
       <Sidebar />
       <VideoGrid videos={filteredVideos} />
