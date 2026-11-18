@@ -10,10 +10,6 @@ function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([...videos]);
 
-  /* function searchVideos() {
-    
-  } */
-
   function handleInput(event) {
     setSearchQuery(event.target.value);
 
@@ -37,7 +33,7 @@ function HomePage() {
   return (
     <>
       <title>YouTube</title>
-      <Header searchVideos={searchVideos} handleInput={handleInput} />
+      <Header handleInput={handleInput} />
       <TopicRecommendations />
       <Sidebar />
       <VideoGrid videos={filteredVideos} />
