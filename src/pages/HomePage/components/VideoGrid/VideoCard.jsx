@@ -6,13 +6,27 @@ function VideoCard({ video }) {
     <>
       <div className='video-preview'>
         <a href={video.videoUrl} className='thumbnail-container'>
-          <img className='thumbnail' src={video.thumbnail} />
+          <img
+            className='thumbnail'
+            width={640}
+            height={360}
+            loading='lazy'
+            decoding='async'
+            alt={video.title}
+            src={video.thumbnail}
+          />
           <div className='video-time'>{video.videoTime}</div>
         </a>
 
         <div className='info-container'>
           <a className='channel-pic-container' href={video.channelUrl}>
-            <img className='channel-pic' src={video.channelImage} />
+            <img
+              width={48}
+              height={48}
+              className='channel-pic'
+              src={video.channelImage}
+              alt={`${video.channelName} channel`}
+            />
           </a>
 
           <div className='video-info'>
