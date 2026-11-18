@@ -2,10 +2,10 @@ import { recommendations } from '../../../../data/recommendations.js';
 import TopicCard from './TopicCard.jsx';
 import './TopicRecommendations.css';
 
-function TopicRecommendations() {
+function TopicRecommendations({ handleTopic }) {
   return (
     <div className='topic-recommendations'>
-      <div className='topic-link'>
+      {/* <div className='topic-link' onClick={handleTopic}>
         <button className='ai-topic-button'>
           <div className='ai-topic-container topics'>
             <svg
@@ -18,11 +18,15 @@ function TopicRecommendations() {
             <div>Your custom feed</div>
           </div>
         </button>
-      </div>
+      </div> */}
 
       {recommendations.map((recommendation) => {
         return (
-          <TopicCard key={recommendation.id} recommendation={recommendation} />
+          <TopicCard
+            key={recommendation.id}
+            recommendation={recommendation}
+            handleTopic={handleTopic}
+          />
         );
       })}
     </div>
