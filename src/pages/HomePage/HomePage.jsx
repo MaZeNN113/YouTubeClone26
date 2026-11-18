@@ -10,7 +10,7 @@ function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [draftQuery, setDraftQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([...videos]);
-  const [selectedTopic, setSelectedTopic] = useState('all');
+  const [selectedTopic, setSelectedTopic] = useState('All');
 
   function handleInput(event) {
     setDraftQuery(event.target.value);
