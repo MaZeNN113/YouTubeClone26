@@ -1704,7 +1704,7 @@ export function calculateDate(uploadedAt) {
   return result;
 }
 
-export async function fetchVideoTime(videoId) {
+/* export async function fetchVideoTime(videoId) {
   try {
     const apiKey = 'API_KEY';
     const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`;
@@ -1721,5 +1721,5 @@ export async function fetchVideoTime(videoId) {
   } catch (error) {
     throw new Error(`ERROR: ${response.status}`);
   }
-}
+} */
 

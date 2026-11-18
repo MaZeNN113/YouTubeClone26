@@ -54,15 +54,9 @@ function HomePage() {
     } else {
       setFilteredVideos(
         videos.filter((video) => {
-          const searchableContent = (
-            video.title +
-            '' +
-            video.channelName +
-            '' +
-            video.keywords.join(' ')
-          ).toLowerCase();
+          const lowerCaseKeywords = video.keywords.map((keyword) => keyword.toLowerCase())
 
-          return searchableContent.includes(clickedTopic.toLowerCase());
+          return lowerCaseKeywords.includes(clickedTopic.toLowerCase()) /* || video.title.includes(clickedTopic.toLowerCase()) */;
         }),
       );
     }
@@ -72,7 +66,10 @@ function HomePage() {
     <>
       <title>YouTube</title>
       <Header searchVideos={searchVideos} handleInput={handleInput} />
-      <TopicRecommendations handleTopic={handleTopic} />
+      <TopicRecommendations
+        selectedTopic={selectedTopic}
+        handleTopic={handleTopic}
+      />
       <Sidebar />
       <VideoGrid videos={filteredVideos} />
     </>

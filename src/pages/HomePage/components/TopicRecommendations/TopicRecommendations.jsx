@@ -2,7 +2,7 @@ import { recommendations } from '../../../../data/recommendations.js';
 import TopicCard from './TopicCard.jsx';
 import './TopicRecommendations.css';
 
-function TopicRecommendations({ handleTopic }) {
+function TopicRecommendations({ handleTopic, selectedTopic }) {
   return (
     <div className='topic-recommendations'>
       {/* <div className='topic-link' onClick={handleTopic}>
@@ -26,6 +26,7 @@ function TopicRecommendations({ handleTopic }) {
             key={recommendation.id}
             recommendation={recommendation}
             handleTopic={handleTopic}
+            selectedTopic={selectedTopic}
           />
         );
       })}
