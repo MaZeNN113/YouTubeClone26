@@ -49,19 +49,23 @@ function HomePage() {
     // to prevent it from waiting to press 2 times
     setSelectedTopic(clickedTopic);
 
-    setFilteredVideos(
-      videos.filter((video) => {
-        const searchableContent = (
-          video.title +
-          '' +
-          video.channelName +
-          '' +
-          video.keywords.join(' ')
-        ).toLowerCase();
+    if (clickedTopic === 'All') {
+      setFilteredVideos([...videos]);
+    } else {
+      setFilteredVideos(
+        videos.filter((video) => {
+          const searchableContent = (
+            video.title +
+            '' +
+            video.channelName +
+            '' +
+            video.keywords.join(' ')
+          ).toLowerCase();
 
-        return searchableContent.includes(clickedTopic.toLowerCase());
-      }),
-    );
+          return searchableContent.includes(clickedTopic.toLowerCase());
+        }),
+      );
+    }
   }
 
   return (
