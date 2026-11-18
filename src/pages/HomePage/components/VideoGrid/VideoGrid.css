@@ -25,18 +25,15 @@ main {
 /* This below contains the thumbnail image */
 .thumbnail {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   border-radius: 15px;
   margin-bottom: 1.25rem;
-  object-fit: cover;
 }
 
 .thumbnail-container {
   position: relative;
   display: block;
-  aspect-ratio: 16/9;
-  overflow: hidden;
 }
 
 .video-time {
@@ -65,15 +62,12 @@ main {
   height: 2.5rem;
   object-fit: cover;
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .channel-pic-container {
   display: flex;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 0.625rem;
   flex-shrink: 0;
 }
