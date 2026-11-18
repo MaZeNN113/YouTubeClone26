@@ -43,7 +43,7 @@ function HomePage() {
 
   function handleTopic(event) {
     // Assign the clickedTopic to get the topic immediately
-    const clickedTopic = event.target.innerText;
+    const clickedTopic = event.currentTarget.innerText;
 
     // Give the setter function this clickTopic,
     // to prevent it from waiting to press 2 times
