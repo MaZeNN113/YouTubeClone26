@@ -17,7 +17,8 @@ function Header({ searchVideos, handleInput }) {
       <div className='mid-section'>
         <div className='search-box-container'>
           <input
-          onChange={handleInput}
+            onKeyDown={(event) => event.key === 'Enter' && searchVideos()}
+            onChange={handleInput}
             className='search-box js-search-box'
             type='text'
             placeholder='Search or ask a question'
@@ -33,7 +34,9 @@ function Header({ searchVideos, handleInput }) {
               </svg>
             </div>
           </button>
-          <button className='search-box-button js-search-box-button' onClick={searchVideos}>
+          <button
+            className='search-box-button js-search-box-button'
+            onClick={searchVideos}>
             <svg
               className='search-box-icon'
               xmlns='http://w3.org'
