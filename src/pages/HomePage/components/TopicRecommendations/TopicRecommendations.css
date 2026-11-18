@@ -62,7 +62,7 @@
 
 /* Changing the colors when 
 the topic button is pressed */
-.js-topic-enabled {
+.topic-enabled {
   background-color: #e3e3e3;
   color: black;
 }

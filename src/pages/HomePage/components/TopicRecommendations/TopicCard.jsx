@@ -1,5 +1,3 @@
-import './TopicRecommendations.css';
-
 function TopicCard({ recommendation, handleTopic }) {
   return (
     <div className='topic-link'>
