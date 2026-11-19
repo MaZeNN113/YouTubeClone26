@@ -1,5 +1,5 @@
-import dayjs from 'https://cdn.jsdelivr.net/npm/dayjs@1.11.18/+esm';
-import relativeTime from 'https://cdn.jsdelivr.net/npm/dayjs@1.11.18/plugin/relativeTime.js/+esm';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
 export const videos = [
   {
@@ -25,10 +25,10 @@ export const videos = [
       'survival challenge',
       'adventure video',
       'viral video',
-      'entertainment video'
+      'entertainment video',
     ],
     videoUrl: 'https://youtu.be/gTKS8SAwUzE',
-    channelUrl: 'https://www.youtube.com/@MrBeast'
+    channelUrl: 'https://www.youtube.com/@MrBeast',
   },
   {
     id: '45oG6w7bvtM',
@@ -54,10 +54,10 @@ export const videos = [
       'rich lifestyle',
       'financial goals',
       'smart spending',
-      'smartphones'
+      'smartphones',
     ],
     videoUrl: 'https://youtu.be/45oG6w7bvtM',
-    channelUrl: 'https://www.youtube.com/@SandeepSwadia'
+    channelUrl: 'https://www.youtube.com/@SandeepSwadia',
   },
   {
     id: 'oMtAfbNHfnw',
@@ -83,10 +83,10 @@ export const videos = [
       'growth mindset',
       'time management',
       'work ethic',
-      'success habits'
+      'success habits',
     ],
     videoUrl: 'https://youtu.be/oMtAfbNHfnw',
-    channelUrl: 'https://www.youtube.com/@DanKoeTalks'
+    channelUrl: 'https://www.youtube.com/@DanKoeTalks',
   },
   {
     id: 'O1AffrDMnLw',
@@ -111,10 +111,10 @@ export const videos = [
       'السوشيال ميديا',
       'التركيز',
       'العادات',
-      'تقليل استخدام الهاتف'
+      'تقليل استخدام الهاتف',
     ],
     videoUrl: 'https://youtu.be/O1AffrDMnLw',
-    channelUrl: 'https://www.youtube.com/@RaeedXA-G'
+    channelUrl: 'https://www.youtube.com/@RaeedXA-G',
   },
   {
     id: 'e1q-TuHdc4Y',
@@ -140,7 +140,7 @@ export const videos = [
       'technology news',
     ],
     videoUrl: 'https://youtu.be/e1q-TuHdc4Y',
-    channelUrl: 'https://www.youtube.com/@mkbhd'
+    channelUrl: 'https://www.youtube.com/@mkbhd',
   },
   {
     id: '3acWaDehEiU',
@@ -166,10 +166,10 @@ export const videos = [
       'العادات اليومية',
       'التحفيز',
       'تغيير الحياة',
-      'تحسين النفس'
+      'تحسين النفس',
     ],
     videoUrl: 'https://youtu.be/3acWaDehEiU',
-    channelUrl: 'https://www.youtube.com/@DroosOnline4u'
+    channelUrl: 'https://www.youtube.com/@DroosOnline4u',
   },
   {
     id: 'eYBEJBfq_Zs',
@@ -195,10 +195,10 @@ export const videos = [
       'mobile technology',
       'smartphone comparison',
       'gadgets',
-      'android phone'
+      'android phone',
     ],
     videoUrl: 'https://youtu.be/eYBEJBfq_Zs',
-    channelUrl: 'https://www.youtube.com/@Mrwhosetheboss'
+    channelUrl: 'https://www.youtube.com/@Mrwhosetheboss',
   },
   {
     id: 'g9WYnaBlMv8',
@@ -224,10 +224,10 @@ export const videos = [
       'android tools',
       'app recommendations',
       'mobile productivity',
-      'smartphone tips'
+      'smartphone tips',
     ],
     videoUrl: 'https://youtu.be/g9WYnaBlMv8',
-    channelUrl: 'https://www.youtube.com/@sambeckman'
+    channelUrl: 'https://www.youtube.com/@sambeckman',
   },
   {
     id: 'ss-k44mStRA',
@@ -252,10 +252,10 @@ export const videos = [
       'online security',
       'scammer reaction',
       'digital safety',
-      'entertainment'
+      'entertainment',
     ],
     videoUrl: 'https://youtu.be/ss-k44mStRA',
-    channelUrl: 'https://www.youtube.com/@ScammerPayback'
+    channelUrl: 'https://www.youtube.com/@ScammerPayback',
   },
   {
     id: '2qF3K_kBOzo',
@@ -281,10 +281,10 @@ export const videos = [
       'وثائقي علمي',
       'ظواهر طبيعية',
       'كوارث طبيعية',
-      'حقائق علمية'
+      'حقائق علمية',
     ],
     videoUrl: 'https://youtu.be/2qF3K_kBOzo',
-    channelUrl: 'https://www.youtube.com/@aburob'
+    channelUrl: 'https://www.youtube.com/@aburob',
   },
   {
     id: '9uIbPuBT0Uo',
@@ -308,10 +308,10 @@ export const videos = [
       'going viral',
       'content strategy',
       'internet entertainment',
-      'video production'
+      'video production',
     ],
     videoUrl: 'https://youtu.be/9uIbPuBT0Uo',
-    channelUrl: 'https://www.youtube.com/@zackdfilms'
+    channelUrl: 'https://www.youtube.com/@zackdfilms',
   },
   {
     id: '4zxG_oUxBg4',
@@ -336,10 +336,10 @@ export const videos = [
       'political documentary',
       'china and uk',
       'geography',
-      'current affairs'
+      'current affairs',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=4zxG_oUxBg4',
-    channelUrl: 'https://www.youtube.com/@fern-tv'
+    channelUrl: 'https://www.youtube.com/@fern-tv',
   },
   {
     id: '2CMoyNf4_1M',
@@ -364,10 +364,10 @@ export const videos = [
       'الحرب العالمية',
       'التاريخ الحديث',
       'الحرب العالمية الثانية باختصار',
-      'ألمانيا النازية'
+      'ألمانيا النازية',
     ],
     videoUrl: 'https://youtu.be/2CMoyNf4_1M',
-    channelUrl: 'https://www.youtube.com/@HussainAHN'
+    channelUrl: 'https://www.youtube.com/@HussainAHN',
   },
   {
     id: 'G3e-cpL7ofc',
@@ -394,10 +394,10 @@ export const videos = [
       'css grid',
       'frontend development',
       'website coding',
-      'beginner programming'
+      'beginner programming',
     ],
     videoUrl: 'https://youtu.be/G3e-cpL7ofc',
-    channelUrl: 'https://www.youtube.com/@SuperSimpleDev'
+    channelUrl: 'https://www.youtube.com/@SuperSimpleDev',
   },
   {
     id: 'suuhxydi6Kk',
@@ -423,10 +423,10 @@ export const videos = [
       'cloud backup',
       'phone tips',
       'digital memories',
-      'photo organization'
+      'photo organization',
     ],
     videoUrl: 'https://youtu.be/suuhxydi6Kk',
-    channelUrl: 'https://www.youtube.com/@bulletjournal'
+    channelUrl: 'https://www.youtube.com/@bulletjournal',
   },
   {
     id: 'qkLkdc32KGs',
@@ -452,10 +452,10 @@ export const videos = [
       'journey',
       'travel documentary',
       'backpacking',
-      'world travel'
+      'world travel',
     ],
     videoUrl: 'https://youtu.be/qkLkdc32KGs',
-    channelUrl: 'https://www.youtube.com/@Niko'
+    channelUrl: 'https://www.youtube.com/@Niko',
   },
   {
     id: 'QeFLWVZ964U',
@@ -481,10 +481,10 @@ export const videos = [
       'الإرهاب',
       'الحرب على الإرهاب',
       'القاعدة',
-      'سياسة دولية'
+      'سياسة دولية',
     ],
     videoUrl: 'https://youtu.be/QeFLWVZ964U',
-    channelUrl: 'https://www.youtube.com/@hamzaabdrzaq'
+    channelUrl: 'https://www.youtube.com/@hamzaabdrzaq',
   },
   {
     id: 'iApmrB-NOgY',
@@ -510,10 +510,10 @@ export const videos = [
       'الابتكار',
       'الاختراعات',
       'مخاطر التكنولوجيا',
-      'مستقبل البشرية'
+      'مستقبل البشرية',
     ],
     videoUrl: 'https://youtu.be/iApmrB-NOgY',
-    channelUrl: 'https://www.youtube.com/@MohammadYousseff'
+    channelUrl: 'https://www.youtube.com/@MohammadYousseff',
   },
   {
     id: 'XzBBRj41DVE',
@@ -539,10 +539,10 @@ export const videos = [
       'الثروة',
       'الادخار',
       'إدارة المال',
-      'الحرية المالية'
+      'الحرية المالية',
     ],
     videoUrl: 'https://youtu.be/XzBBRj41DVE',
-    channelUrl: 'https://www.youtube.com/@Dupamicaffeine'
+    channelUrl: 'https://www.youtube.com/@Dupamicaffeine',
   },
   {
     id: 'scu4-irtB8k',
@@ -568,10 +568,10 @@ export const videos = [
       'مناقشة',
       'internet discussion',
       'arabic podcast',
-      'social media debate'
+      'social media debate',
     ],
     videoUrl: 'https://youtu.be/scu4-irtB8k',
-    channelUrl: 'https://www.youtube.com/@DroosOnline4u'
+    channelUrl: 'https://www.youtube.com/@DroosOnline4u',
   },
 
   {
@@ -598,10 +598,10 @@ export const videos = [
       'coding crash course',
       'fetch API',
       'event loop',
-      'frontend programming'
+      'frontend programming',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=PoRJizFvM7s',
-    channelUrl: 'https://www.youtube.com/@TraversyMedia'
+    channelUrl: 'https://www.youtube.com/@TraversyMedia',
   },
   {
     id: 'qz0aGYrrlhU',
@@ -628,10 +628,10 @@ export const videos = [
       'CSS styling',
       'Chrome DevTools',
       'web page inspection',
-      'coding for beginners'
+      'coding for beginners',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=qz0aGYrrlhU',
-    channelUrl: 'https://www.youtube.com/c/programmingwithmosh'
+    channelUrl: 'https://www.youtube.com/c/programmingwithmosh',
   },
   {
     id: 'qYNweeDHiyU',
@@ -658,10 +658,10 @@ export const videos = [
       'AI tutorial',
       'large language models',
       'technology',
-      'future technology'
+      'future technology',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=qYNweeDHiyU',
-    channelUrl: 'https://www.youtube.com/@IBMTechnology'
+    channelUrl: 'https://www.youtube.com/@IBMTechnology',
   },
   {
     id: 'b9_Vh9h3Ohw',
@@ -689,10 +689,10 @@ export const videos = [
       'phone history',
       'gadgets',
       'consumer technology',
-      'tech documentary'
+      'tech documentary',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=b9_Vh9h3Ohw',
-    channelUrl: 'https://www.youtube.com/@TheVerge'
+    channelUrl: 'https://www.youtube.com/@TheVerge',
   },
   {
     id: 'hSGt_rhu49U&',
@@ -719,10 +719,10 @@ export const videos = [
       'daily planning',
       'goal setting',
       'time management',
-      'personal development'
+      'personal development',
     ],
     videoUrl: 'https://m.youtube.com/watch?v=hSGt_rhu49U&',
-    channelUrl: 'https://www.youtube.com/@AlexanderFYoung'
+    channelUrl: 'https://www.youtube.com/@AlexanderFYoung',
   },
   {
     id: '1Ob-hAYCnJE',
@@ -748,10 +748,10 @@ export const videos = [
       'financial decision-making',
       'long-term investing',
       'investment basics',
-      'wealth building'
+      'wealth building',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=1Ob-hAYCnJE',
-    channelUrl: 'https://www.youtube.com/@BenFelixCSI'
+    channelUrl: 'https://www.youtube.com/@BenFelixCSI',
   },
   {
     id: 'zohg5rx5ptU',
@@ -777,10 +777,10 @@ export const videos = [
       'history of the world',
       'civilization',
       'ancient world',
-      'education'
+      'education',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=zohg5rx5ptU',
-    channelUrl: 'https://www.youtube.com/@BeginningToNoww'
+    channelUrl: 'https://www.youtube.com/@BeginningToNoww',
   },
   {
     id: 'W9bprJ6V_4c',
@@ -806,10 +806,10 @@ export const videos = [
       'European travel',
       'travel culture',
       'tourism',
-      'adventure'
+      'adventure',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=W9bprJ6V_4c',
-    channelUrl: 'https://www.youtube.com/ricksteves'
+    channelUrl: 'https://www.youtube.com/ricksteves',
   },
   {
     id: '8uE6-vIi1rQ',
@@ -835,10 +835,10 @@ export const videos = [
       'design paradigms',
       'game mechanics',
       'level design',
-      'interactive entertainment'
+      'interactive entertainment',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=8uE6-vIi1rQ',
-    channelUrl: 'https://www.youtube.com/channel/UC0JB7TSe49lg56u6qH8y_MQ'
+    channelUrl: 'https://www.youtube.com/channel/UC0JB7TSe49lg56u6qH8y_MQ',
   },
   {
     id: 'W0KdKhTeVKM',
@@ -865,10 +865,10 @@ export const videos = [
       'marketing',
       'technology and business',
       'online business',
-      'entrepreneur'
+      'entrepreneur',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=W0KdKhTeVKM',
-    channelUrl: 'https://www.youtube.com/@aliabdaal'
+    channelUrl: 'https://www.youtube.com/@aliabdaal',
   },
   {
     id: '9HOpanT0GRs',
@@ -892,10 +892,10 @@ export const videos = [
       'system security',
       'software security',
       'cyber threats',
-      'computer security'
+      'computer security',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=9HOpanT0GRs',
-    channelUrl: 'https://www.youtube.com/@freecodecamp'
+    channelUrl: 'https://www.youtube.com/@freecodecamp',
   },
 
   {
@@ -921,10 +921,10 @@ export const videos = [
       'privacy documentary',
       'security intelligence',
       'internet privacy',
-      'digital rights'
+      'digital rights',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=u05rQOPxxlE',
-    channelUrl: 'https://www.youtube.com/@ENDEVRDocs'
+    channelUrl: 'https://www.youtube.com/@ENDEVRDocs',
   },
 
   {
@@ -951,10 +951,10 @@ export const videos = [
       'data analysis',
       'data sourcing',
       'data analytics',
-      'programming'
+      'programming',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=ua-CiDNNj30',
-    channelUrl: 'https://www.youtube.com/@freecodecamp'
+    channelUrl: 'https://www.youtube.com/@freecodecamp',
   },
 
   {
@@ -981,10 +981,10 @@ export const videos = [
       'supervised learning',
       'unsupervised learning',
       'artificial intelligence',
-      'data science'
+      'data science',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=i_LwzRVP7bg',
-    channelUrl: 'https://www.youtube.com/@freecodecamp'
+    channelUrl: 'https://www.youtube.com/@freecodecamp',
   },
 
   {
@@ -1012,10 +1012,10 @@ export const videos = [
       'software development',
       'beginner course',
       'continuous deployment',
-      'cloud computing'
+      'cloud computing',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=fqMOX6JJhGo',
-    channelUrl: 'https://www.youtube.com/@freecodecamp'
+    channelUrl: 'https://www.youtube.com/@freecodecamp',
   },
 
   {
@@ -1042,10 +1042,10 @@ export const videos = [
       'relational schema',
       'dbms',
       'database architecture',
-      'backend development'
+      'backend development',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=h0j0QN2b57M',
-    channelUrl: 'https://www.youtube.com/channel/UCZUyPT9DkJWmS_DzdOi7RIA'
+    channelUrl: 'https://www.youtube.com/channel/UCZUyPT9DkJWmS_DzdOi7RIA',
   },
 
   {
@@ -1073,10 +1073,10 @@ export const videos = [
       'cloud infrastructure',
       'cloud architecture',
       'devops',
-      'hosting'
+      'hosting',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=k1RI5locZE4',
-    channelUrl: 'https://www.youtube.com/@edurekaIN'
+    channelUrl: 'https://www.youtube.com/@edurekaIN',
   },
 
   {
@@ -1103,10 +1103,10 @@ export const videos = [
       'git rebase',
       'pull requests',
       'open source contribution',
-      'software development'
+      'software development',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=zTjRZNkhiEU',
-    channelUrl: 'https://www.youtube.com/@freecodecamp'
+    channelUrl: 'https://www.youtube.com/@freecodecamp',
   },
 
   {
@@ -1133,10 +1133,10 @@ export const videos = [
       'inflation',
       'ray dalio',
       'finance',
-      'global economy'
+      'global economy',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=PHe0bXAIuk0',
-    channelUrl: 'https://www.youtube.com/@PrinciplesbyRayDalio'
+    channelUrl: 'https://www.youtube.com/@PrinciplesbyRayDalio',
   },
 
   {
@@ -1164,10 +1164,10 @@ export const videos = [
       'global power',
       'political documentary',
       'politics',
-      'Documentary'
+      'Documentary',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=Y0h8Pkh_yPg',
-    channelUrl: 'https://www.youtube.com/dwdocumentary'
+    channelUrl: 'https://www.youtube.com/dwdocumentary',
   },
 
   {
@@ -1193,10 +1193,10 @@ export const videos = [
       'lecture',
       'critical thinking',
       'human nature',
-      'education'
+      'education',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=mUHYlyacMmA',
-    channelUrl: 'https://www.youtube.com/@YaleCourses'
+    channelUrl: 'https://www.youtube.com/@YaleCourses',
   },
 
   {
@@ -1222,10 +1222,10 @@ export const videos = [
       'immersion',
       'foreign language',
       'daily practice',
-      'learn languages'
+      'learn languages',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=19OKvadH_D0',
-    channelUrl: 'https://www.youtube.com/channel/UC3_iSRqqZ7DTVlBNd9lv8jA'
+    channelUrl: 'https://www.youtube.com/channel/UC3_iSRqqZ7DTVlBNd9lv8jA',
   },
 
   {
@@ -1252,10 +1252,10 @@ export const videos = [
       'ats resume',
       'professional growth',
       'finding a job',
-      'job'
+      'job',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=DUGXWzNETBM',
-    channelUrl: 'https://www.youtube.com/@teal_hq'
+    channelUrl: 'https://www.youtube.com/@teal_hq',
   },
 
   {
@@ -1283,10 +1283,10 @@ export const videos = [
       'finite and infinite games',
       'remote work',
       'team building',
-      'business leadership'
+      'business leadership',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=9ArOusHEVZo',
-    channelUrl: 'https://www.youtube.com/@SimonSinek'
+    channelUrl: 'https://www.youtube.com/@SimonSinek',
   },
 
   {
@@ -1312,10 +1312,10 @@ export const videos = [
       'mechanical engineering',
       'factory',
       'engineering documentary',
-      'industrial design'
+      'industrial design',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=3DgT3GtwGuc',
-    channelUrl: 'https://www.youtube.com/@FreeDocumentary'
+    channelUrl: 'https://www.youtube.com/@FreeDocumentary',
   },
 
   {
@@ -1341,10 +1341,10 @@ export const videos = [
       'laptop buying guide',
       'computer history',
       'apple technology',
-      'laptop review'
+      'laptop review',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=8TlrXc3TYgs',
-    channelUrl: 'https://www.youtube.com/@Mrwhosetheboss'
+    channelUrl: 'https://www.youtube.com/@Mrwhosetheboss',
   },
 
   {
@@ -1369,10 +1369,10 @@ export const videos = [
       'React',
       'System compiler',
       'SQL',
-      'PostgreSQL'
+      'PostgreSQL',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=paP7p87Mb50',
-    channelUrl: 'https://www.youtube.com/@manware'
+    channelUrl: 'https://www.youtube.com/@manware',
   },
 
   {
@@ -1396,10 +1396,10 @@ export const videos = [
       'vector design',
       'design principles',
       'creative design',
-      'illustrator tools'
+      'illustrator tools',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=h7komjsQq50',
-    channelUrl: 'https://www.youtube.com/@WillPatersonDesign'
+    channelUrl: 'https://www.youtube.com/@WillPatersonDesign',
   },
 
   {
@@ -1424,10 +1424,10 @@ export const videos = [
       'product design',
       'web design',
       'auto layout',
-      'components'
+      'components',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=1SNZRCVNizg',
-    channelUrl: 'https://www.youtube.com/@DesignWithArash'
+    channelUrl: 'https://www.youtube.com/@DesignWithArash',
   },
 
   {
@@ -1452,10 +1452,10 @@ export const videos = [
       'confidence',
       'listening',
       'conversation skills',
-      'business communication'
+      'business communication',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=HAnw168huqA',
-    channelUrl: 'https://www.youtube.com/@stanfordgsb'
+    channelUrl: 'https://www.youtube.com/@stanfordgsb',
   },
 
   {
@@ -1480,10 +1480,10 @@ export const videos = [
       'business communication',
       'leadership',
       'presentation skills',
-      'soft skills'
+      'soft skills',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=YJXUOJKtn8o',
-    channelUrl: 'https://www.youtube.com/@alexanderlyon'
+    channelUrl: 'https://www.youtube.com/@alexanderlyon',
   },
 
   {
@@ -1510,10 +1510,10 @@ export const videos = [
       'creator laptops',
       'macbook',
       'windows laptops',
-      'hardware'
+      'hardware',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=HzUdgtMXK2Y',
-    channelUrl: 'https://www.youtube.com/@JustJoshTech'
+    channelUrl: 'https://www.youtube.com/@JustJoshTech',
   },
 
   {
@@ -1538,10 +1538,10 @@ export const videos = [
       'productivity apps',
       'mobile technology',
       'gadgets',
-      'smartphone tips'
+      'smartphone tips',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=KW21q_7U6Ao',
-    channelUrl: 'https://www.youtube.com/@mkbhd'
+    channelUrl: 'https://www.youtube.com/@mkbhd',
   },
 
   {
@@ -1567,10 +1567,10 @@ export const videos = [
       'landscapes',
       'history',
       'planet earth',
-      'scientific documentary'
+      'scientific documentary',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=SAK4DYhKeTg',
-    channelUrl: 'https://www.youtube.com/@HISTORY'
+    channelUrl: 'https://www.youtube.com/@HISTORY',
   },
 
   {
@@ -1596,10 +1596,10 @@ export const videos = [
       'discipline',
       'motivation',
       'goal setting',
-      'continuous improvement'
+      'continuous improvement',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=8dHEG7WxR4c',
-    channelUrl: 'https://www.youtube.com/@melrobbins'
+    channelUrl: 'https://www.youtube.com/@melrobbins',
   },
 
   {
@@ -1624,10 +1624,10 @@ export const videos = [
       'self-improvement',
       'motivation',
       'mindset',
-      'life improvement'
+      'life improvement',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=NcvDhZIoGas',
-    channelUrl: 'https://www.youtube.com/@DanZakaria'
+    channelUrl: 'https://www.youtube.com/@DanZakaria',
   },
 
   {
@@ -1652,10 +1652,10 @@ export const videos = [
       'public speaking',
       'communication skills',
       'people skills',
-      'professional development'
+      'professional development',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=S0mbgU239ao',
-    channelUrl: 'https://www.youtube.com/@MaxwellLeadership'
+    channelUrl: 'https://www.youtube.com/@MaxwellLeadership',
   },
 
   {
@@ -1680,11 +1680,11 @@ export const videos = [
       'android',
       'iphone',
       'mobile devices',
-      'gadgets'
+      'gadgets',
     ],
     videoUrl: 'https://www.youtube.com/watch?v=sfyL4BswUeE',
-    channelUrl: 'https://www.youtube.com/@mkbhd'
-  }
+    channelUrl: 'https://www.youtube.com/@mkbhd',
+  },
 ];
 
 export function formatViews(num) {
@@ -1722,4 +1722,3 @@ export function calculateDate(uploadedAt) {
     throw new Error(`ERROR: ${response.status}`);
   }
 } */
-
