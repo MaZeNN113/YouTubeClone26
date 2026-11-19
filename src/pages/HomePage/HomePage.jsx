@@ -44,19 +44,28 @@ function HomePage() {
   function handleTopic(event) {
     // Assign the clickedTopic to get the topic immediately
     const clickedTopic = event.currentTarget.innerText;
+    // Create this new variable to store the value of 
+    // the selectedTopic and check wether it's All topics
+    // or just another topic to handle the generation
+    const newTopic = selectedTopic === clickedTopic ? 'All' : clickedTopic;
 
     // Give the setter function this clickTopic,
     // to prevent it from waiting to press 2 times
-    setSelectedTopic(clickedTopic);
+    setSelectedTopic(newTopic);
 
-    if (clickedTopic === 'All') {
+
+    if (newTopic === 'All') {
       setFilteredVideos([...videos]);
     } else {
       setFilteredVideos(
         videos.filter((video) => {
-          const lowerCaseKeywords = video.keywords.map((keyword) => keyword.toLowerCase())
+          const lowerCaseKeywords = video.keywords.map((keyword) =>
+            keyword.toLowerCase(),
+          );
 
-          return lowerCaseKeywords.includes(clickedTopic.toLowerCase()) /* || video.title.includes(clickedTopic.toLowerCase()) */;
+          return lowerCaseKeywords.includes(
+            newTopic.toLowerCase(),
+          ) /* || video.title.includes(clickedTopic.toLowerCase()) */;
         }),
       );
     }
