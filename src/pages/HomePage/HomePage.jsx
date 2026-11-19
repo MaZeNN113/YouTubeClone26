@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { videos } from '../../data/videos.js';
 
 function HomePage() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [/* searchQuery */, setSearchQuery] = useState('');
   const [draftQuery, setDraftQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([...videos]);
   const [selectedTopic, setSelectedTopic] = useState('All');
@@ -44,15 +44,14 @@ function HomePage() {
   function handleTopic(event) {
     // Assign the clickedTopic to get the topic immediately
     const clickedTopic = event.currentTarget.innerText;
-    // Create this new variable to store the value of 
-    // the selectedTopic and check wether it's All topics
-    // or just another topic to handle the generation
+    /* Create this new variable to store the value of 
+    the selectedTopic and check wether it's All topics
+    or just another topic to handle the generation */
     const newTopic = selectedTopic === clickedTopic ? 'All' : clickedTopic;
 
-    // Give the setter function this clickTopic,
-    // to prevent it from waiting to press 2 times
+    /* Give the setter function this clickTopic,
+    to prevent it from waiting to press 2 times */
     setSelectedTopic(newTopic);
-
 
     if (newTopic === 'All') {
       setFilteredVideos([...videos]);
@@ -74,7 +73,10 @@ function HomePage() {
   return (
     <>
       <title>YouTube</title>
-      <Header searchVideos={searchVideos} handleInput={handleInput} />
+      <Header
+        searchVideos={searchVideos}
+        handleInput={handleInput}
+      />
       <TopicRecommendations
         selectedTopic={selectedTopic}
         handleTopic={handleTopic}
