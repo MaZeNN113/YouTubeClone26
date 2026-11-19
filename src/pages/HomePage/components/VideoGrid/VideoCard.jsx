@@ -1,5 +1,6 @@
 import './VideoGrid.css';
 import { formatViews, calculateDate } from '../../../../data/videos';
+import { assetPath } from '../../../../utils/assetPath';
 
 function VideoCard({ video }) {
   return (
@@ -13,7 +14,7 @@ function VideoCard({ video }) {
             loading='lazy'
             decoding='async'
             alt={video.title}
-            src={video.thumbnail}
+            src={assetPath(video.thumbnail)}
           />
           <div className='video-time'>{video.videoTime}</div>
         </a>
@@ -24,7 +25,7 @@ function VideoCard({ video }) {
               width={48}
               height={48}
               className='channel-pic'
-              src={video.channelImage}
+              src={assetPath(video.channelImage)}
               alt={`${video.channelName} channel`}
             />
           </a>
