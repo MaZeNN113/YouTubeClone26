@@ -307,7 +307,7 @@ header {
 /* ======================== */
 
 .mobile-search-container {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   opacity: 0;
@@ -556,14 +556,22 @@ header {
   }
 
   .mobile-search-container {
+    display: flex;
     position: absolute;
     inset: 0;
     padding: 0 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
 
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateX(20px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0s linear 0.3s;
   }
 
   header.mobile-mode .mobile-search-container {
