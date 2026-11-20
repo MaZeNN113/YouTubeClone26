@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import './Header.css';
 
-function Header({ searchVideos, handleInput, userScrollDown}) {
+function Header({ searchVideos, handleInput, userScrollDown }) {
+  const [isMobileSearch, setIsMobileSearch] = useState(false);
+
   return (
-    <header className={userScrollDown ? 'hide-header' : ''}>
+    <header
+      className={`${userScrollDown ? 'hide-header' : ''} ${isMobileSearch ? 'mobile-mode' : ''}`}>
       <div className='left-section'>
         <i className='material-symbols-outlined menu-icon'>menu</i>
 
@@ -12,6 +16,45 @@ function Header({ searchVideos, handleInput, userScrollDown}) {
             className='youtube-header-icon'
           />
         </a>
+      </div>
+
+      {/* The mobile search mode */}
+      <div
+        className={`mobile-search-container ${isMobileSearch ? 'mobile-search-enabled' : ''}`}>
+        <button
+          className='mobile-back-button'
+          onClick={() => setIsMobileSearch(false)}>
+          <i className='material-symbols-outlined mobile-back-icon'>
+            arrow_back
+          </i>
+        </button>
+
+        <input
+          type='text'
+          className='mobile-search-input'
+          placeholder='Search videos'
+          onChange={handleInput}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              searchVideos();
+              setIsMobileSearch(false);
+            }
+          }}
+        />
+
+        <button
+          className='mobile-submit-button'
+          onClick={() => {
+            searchVideos();
+            setIsMobileSearch(false);
+          }}>
+          <svg
+            className='mobile-submit-icon'
+            xmlns='http://w3.org'
+            viewBox='0 0 24 24'>
+            <path d='M11 2a9 9 0 105.641 16.01.966.966 0 00.152.197l3.5 3.5a1 1 0 101.414-1.414l-3.5-3.5a1 1 0 00-.197-.153A8.96 8.96 0 0020 11a9 9 0 00-9-9Zm0 2a7 7 0 110 14 7 7 0 010-14Z'></path>
+          </svg>
+        </button>
       </div>
 
       <div className='mid-section'>
@@ -36,7 +79,13 @@ function Header({ searchVideos, handleInput, userScrollDown}) {
           </button>
           <button
             className='search-box-button js-search-box-button'
-            onClick={searchVideos}>
+            onClick={() => {
+              if (window.innerWidth <= 480) {
+                setIsMobileSearch(true);
+              } else {
+                searchVideos();
+              }
+            }}>
             <svg
               className='search-box-icon'
               xmlns='http://w3.org'
