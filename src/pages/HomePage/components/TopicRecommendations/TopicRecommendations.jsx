@@ -1,33 +1,8 @@
-import { useEffect, useState } from 'react';
 import { recommendations } from '../../../../data/recommendations.js';
 import TopicCard from './TopicCard.jsx';
 import './TopicRecommendations.css';
 
-function TopicRecommendations({ handleTopic, selectedTopic }) {
-  const [userScrollDown, setUserScrollDown] = useState(false);
-
-  useEffect(() => {
-    let lastScrollPosition = 0;
-
-    function userScrollDown() {
-      const currentScrollPosition = window.scrollY;
-
-      if (currentScrollPosition > lastScrollPosition) {
-        setUserScrollDown(true);
-      } else {
-        setUserScrollDown(false);
-      }
-
-      lastScrollPosition = currentScrollPosition;
-    }
-
-    window.addEventListener('scroll', userScrollDown);
-
-    return () => {
-      window.removeEventListener('scroll', userScrollDown);
-    };
-  }, []);
-
+function TopicRecommendations({ handleTopic, selectedTopic, userScrollDown }) {
   return (
     <div
       className={`topic-recommendations ${userScrollDown ? 'hide-topics' : ''}`}>

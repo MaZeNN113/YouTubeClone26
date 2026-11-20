@@ -1,39 +1,6 @@
-import { useEffect, useState } from 'react';
 import './Header.css';
 
-function Header({ searchVideos, handleInput }) {
-  // Adding states to track our behaviour
-  const [userScrollDown, setUserScrollDown] = useState(false);
-
-  useEffect(
-    () => {
-      let lastScrollPosition = 0;
-
-      function userScrollDown() {
-        const currentScrollPosition = window.scrollY;
-
-        if (currentScrollPosition > lastScrollPosition) {
-          setUserScrollDown(true);
-        } else {
-          setUserScrollDown(false);
-        }
-
-        lastScrollPosition = currentScrollPosition;
-      }
-
-      window.addEventListener('scroll', userScrollDown);
-
-      /* Cleanup Function that removes the event listener
-    after having the currentScrollPosition */
-      return () => {
-        window.removeEventListener('scroll', userScrollDown);
-      };
-    },
-    [
-      /* it's empty (the Effect Runs only once when the component mounts.) */
-    ],
-  );
-
+function Header({ searchVideos, handleInput, userScrollDown}) {
   return (
     <header className={userScrollDown ? 'hide-header' : ''}>
       <div className='left-section'>

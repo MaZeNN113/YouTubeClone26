@@ -3,14 +3,46 @@ import TopicRecommendations from './components/TopicRecommendations/TopicRecomme
 import VideoGrid from './components/VideoGrid/VideoGrid.jsx';
 import Header from './components/Header/Header.jsx';
 import Sidebar from './components/Sidebar/Sidebar.jsx';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { videos } from '../../data/videos.js';
 
 function HomePage() {
-  const [/* searchQuery */, setSearchQuery] = useState('');
+  const [, /* searchQuery */ setSearchQuery] = useState('');
   const [draftQuery, setDraftQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([...videos]);
   const [selectedTopic, setSelectedTopic] = useState('All');
+
+  // Adding states to track scroll behaviour
+  const [userScrollDown, setUserScrollDown] = useState(false);
+  // Handle the scroll behaviour
+  useEffect(
+    () => {
+      let lastScrollPosition = 0;
+
+      function userScrollDown() {
+        const currentScrollPosition = window.scrollY;
+
+        if (currentScrollPosition > lastScrollPosition) {
+          setUserScrollDown(true);
+        } else {
+          setUserScrollDown(false);
+        }
+
+        lastScrollPosition = currentScrollPosition;
+      }
+
+      window.addEventListener('scroll', userScrollDown);
+
+      /* Cleanup Function that removes the event listener
+      after having the currentScrollPosition */
+      return () => {
+        window.removeEventListener('scroll', userScrollDown);
+      };
+    },
+    [
+      /* it's empty (the Effect Runs only once when the component mounts.) */
+    ],
+  );
 
   function handleInput(event) {
     setDraftQuery(event.target.value);
@@ -76,10 +108,12 @@ function HomePage() {
       <Header
         searchVideos={searchVideos}
         handleInput={handleInput}
+        userScrollDown={userScrollDown}
       />
       <TopicRecommendations
         selectedTopic={selectedTopic}
         handleTopic={handleTopic}
+        userScrollDown={userScrollDown}
       />
       <Sidebar />
       <VideoGrid videos={filteredVideos} />
