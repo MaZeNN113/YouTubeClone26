@@ -23,18 +23,29 @@ header {
   flex-shrink: 0;
 }
 
-.menu-icon {
-  color: var(--text-primary);
-  margin-top: 3px;
-  font-size: 26px;
-  background-color: transparent;
-  border-radius: 35px;
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.menu-icon:hover {
+.menu-button:hover {
   background-color: var(--bg-hover);
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /*YouTube header*/
@@ -225,7 +236,7 @@ header {
 }
 
 .notifications-icon,
-.dark-mode-icon {
+.theme-icon {
   height: 2.8125rem;
   width: 2.8125rem;
   fill: var(--text-primary);
@@ -235,8 +246,8 @@ header {
   transition: background-color 0.3s;
 }
 
-.notifications-icon:hover,
-.dark-mode-icon:hover {
+.notifications-button:hover,
+.dark-mode-button:hover {
   background-color: var(--bg-hover);
 }
 
@@ -427,7 +438,7 @@ header {
     width: 150px;
   }
 
-  .menu-icon,
+  .menu-button,
   .ai-ask-button,
   .ai-ask-text,
   .mic-search-button,

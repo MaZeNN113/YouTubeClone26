@@ -95,6 +95,7 @@ main {
   justify-content: space-between;
   width: 100%;
   gap: 10px;
+  align-content: start;
 }
 
 .video-title-and-stats {
@@ -108,14 +109,21 @@ main {
 /* ==== DOTS BUTTON ==== */
 /* ===================== */
 
-.dots-icon {
-  font-size: 1.5rem;
-  color: var(--text-primary);
-}
-
 .dots-button {
+  align-self: flex-start;
+  flex-shrink: 0;
   background-color: transparent;
   border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.dots-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  fill: var(--text-primary);
 }
 
 /* ===================== */
