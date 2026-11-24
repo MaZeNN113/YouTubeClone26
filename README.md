@@ -25,11 +25,12 @@ The goal isn't just to make a page that looks like YouTube. It's to understand h
 
 The project uses a curated collection of video data and locally stored assets to create a video-browsing experience.
 
-> *Built as a learning project. Not affiliated with, endorsed by, or connected to YouTube or Google.*
+> _Built as a learning project. Not affiliated with, endorsed by, or connected to YouTube or Google._
 
 ## Features
 
 ### Currently Implemented
+
 - **Video feed** — videos are rendered dynamically from a JavaScript data collection. **(DONE ✔️)**
 - **Search** — search videos by title, channel name, and keywords. **(DONE ✔️)**
 - **Topic recommendations** — filter the feed by selecting a topic. **(DONE ✔️)**
@@ -39,32 +40,34 @@ The project uses a curated collection of video data and locally stored assets to
 - **Reusable video cards** — each video is rendered through a dedicated React component. **(DONE ✔️)**
 - **Video metadata** — display channel information, view counts, upload time, and duration. **(DONE ✔️)**
 - **Asset path helper** — centralize asset paths for deployment compatibility. **(DONE ✔️)**
+- Dark mode **(DONE ✔️)**
 
 ### In Progress / Planned
+
 - Video options menu
 - Watch Later collection
 - Advanced search filters and sorting
 - Infinite scrolling
 - Dedicated watch page with routing
-- Dark mode
 - API-powered video feed
 
-*Planned features are not presented as completed functionality. The project is evolving one feature at a time.*
+_Planned features are not presented as completed functionality. The project is evolving one feature at a time._
 
 ## Tech Stack
 
-| Technology | Purpose |
-| --- | --- |
-| React 19 | UI components and state management |
-| JavaScript (ES6+) | Application logic |
-| Vite 8 | Development server and production build |
-| CSS | Layout, styling, and responsive behavior |
-| Day.js | Date formatting utilities |
-| ESLint | Code quality and linting |
+| Technology        | Purpose                                  |
+| ----------------- | ---------------------------------------- |
+| React 19          | UI components and state management       |
+| JavaScript (ES6+) | Application logic                        |
+| Vite 8            | Development server and production build  |
+| CSS               | Layout, styling, and responsive behavior |
+| Day.js            | Date formatting utilities                |
+| ESLint            | Code quality and linting                 |
 
 ## Getting Started
 
 ### Requirements
+
 - Node.js
 - npm
 - Git
@@ -72,12 +75,14 @@ The project uses a curated collection of video data and locally stored assets to
 ### Installation
 
 1. **Clone the React version:**
+
    ```bash
    git clone --branch React-Version https://github.com/MaZeNN113/YouTubeClone26.git
    cd YouTubeClone26
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
@@ -90,12 +95,12 @@ The project uses a curated collection of video data and locally stored assets to
 
 ### Available Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the local development server |
-| `npm run build` | Create a production build |
-| `npm run preview` | Preview the production build |
-| `npm run lint` | Run ESLint |
+| Command           | Description                        |
+| ----------------- | ---------------------------------- |
+| `npm run dev`     | Start the local development server |
+| `npm run build`   | Create a production build          |
+| `npm run preview` | Preview the production build       |
+| `npm run lint`    | Run ESLint                         |
 
 ## Project Structure
 
@@ -119,7 +124,7 @@ src/
     └── assetPath.js
 ```
 
-*The structure may change as the application grows.*
+_The structure may change as the application grows._
 
 ## React Concepts Practiced
 
@@ -150,6 +155,6 @@ Found a bug or have an idea that could improve the project? Feel free to [open a
 
 **Made by [Mazen Medhat](https://github.com/MaZeNN113)**
 
-*Learning by building. Improving one component at a time.*
+_Learning by building. Improving one component at a time._
 
 </div>
