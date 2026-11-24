@@ -1,5 +1,5 @@
 nav {
-  background-color: #0f0f0f;
+  background-color: var(--bg-primary);
   position: fixed;
   top:70px;
   bottom: 0;
@@ -24,7 +24,7 @@ nav {
 }
 
 .sidebar-link:hover {
-  background-color: rgba(69,69,69,0.6);
+  background-color: var(--bg-hover);
 }
 
 /* =================== */
@@ -33,28 +33,28 @@ nav {
 
 .home-section {
   width: 30px;
-  fill: #e3e3e3;
+  fill: var(--text-primary);
   padding-bottom: 6px;
   padding-top: 10px;
 }
 
 .shorts-section {
   width: 29px;
-  fill: #e3e3e3;
+  fill: var(--text-primary);
   padding-bottom: 8px;
   padding-top: 10px;
 }
 
 .subs-section {
   width: 28px;
-  fill: #e3e3e3;
+  fill: var(--text-primary);
   padding-bottom: 8px;
   padding-top: 10px;
 }
 
 .you-section {
   width: 30px;
-  fill: #e3e3e3;
+  fill: var(--text-primary);
   padding-bottom: 8px;
   padding-top: 10px;
 }
@@ -62,7 +62,7 @@ nav {
 .sidebar-text {
   font-size: 0.75rem;
   font-weight: 400;
-  color: #e3e3e3;
+  color: var(--text-primary);
 }
 
 
@@ -78,7 +78,7 @@ nav {
 }
 
 .subscriptions-list-tooltip {
-  background-color: #2E2E2E;
+  background-color: var(--bg-secondary);
   width: clamp(350px, 30vw, 500px);
   max-height: 80vh;
   overflow-y: auto;
@@ -107,20 +107,20 @@ nav {
   font-size: 30px;
   font-weight: bold;
   padding: 5px 0 10px 15px;
-  color: #e3e3e3;
+  color: var(--text-primary);
 }
 
 /* The channel name below is for Subscriptions list, not for videos */
 .channel-name {
   font-size: 20px;
   font-weight: bold;
-  color: #e3e3e3;
+  color: var(--text-primary);
 }
 
 /* The channel picture below is for Subscriptions list, not for videos */
 .channel-picture {
   width: 40px;
-  fill: #e3e3e3;
+  fill: var(--text-primary);
   border-radius: 20px;
   margin-right: 20px;
 }
@@ -134,7 +134,7 @@ nav {
 }
 
 .subs-info:hover {
-  background-color: rgba(69,69,69,0.6);
+  background-color: var(--bg-hover);
   width: clamp(350px, 30vw, 500px);
   border-radius: 10px;
   width: 100%;
@@ -151,7 +151,7 @@ nav {
 }
 
 .settings-list-tooltip {
-  background-color: #2E2E2E;
+  background-color: var(--bg-secondary);
   width: clamp(350px, 30vw, 500px);
   max-height: 80vh;
   overflow-y: auto;
@@ -179,20 +179,20 @@ nav {
   font-size: 30px;
   font-weight: bold;
   padding: 5px 0 10px 15px;
-  color: #e3e3e3;
+  color: var(--text-primary);
 }
 
 /* The setting name below is for You page list */
 .setting-name {
   font-size: 20px;
   font-weight: bold;
-  color: #e3e3e3;
+  color: var(--text-primary);
 }
 
 .setting-icon {
   width: 30px;
   height: 35px;
-  fill: #e3e3e3;
+  fill: var(--text-primary);
   border-radius: 20px;
   margin-right: 20px;
 }
@@ -215,7 +215,7 @@ nav {
 }
 
 .setting-info:hover {
-  background-color: rgba(69,69,69,0.6);
+  background-color: var(--bg-hover);
   width: 100%;
   border-radius: 10px;
 }
