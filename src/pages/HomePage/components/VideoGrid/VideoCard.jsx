@@ -13,6 +13,7 @@ function VideoCard({ video }) {
             height={360}
             loading='lazy'
             decoding='async'
+            draggable={false}
             alt={video.title}
             src={assetPath(video.thumbnail)}
           />
@@ -24,6 +25,7 @@ function VideoCard({ video }) {
             <img
               width={48}
               height={48}
+              draggable={false}
               className='channel-pic'
               src={assetPath(video.channelImage)}
               alt={`${video.channelName} channel`}

@@ -40,6 +40,7 @@ function Sidebar() {
             href='https://www.youtube.com/@abdullahthe_architect'>
             <img
               className='channel-picture'
+              draggable={false}
               src='images/channels/abdullah-the-architect.jpg'
             />
 
@@ -47,7 +48,11 @@ function Sidebar() {
           </a>
 
           <a className='subs-info' href='https://www.youtube.com/@aburob'>
-            <img className='channel-picture' src='images/channels/aburob.jpg' />
+            <img
+              className='channel-picture'
+              draggable={false}
+              src='images/channels/aburob.jpg'
+            />
 
             <div className='channel-name'>Aburob</div>
           </a>
@@ -57,6 +62,7 @@ function Sidebar() {
             href='https://www.youtube.com/@AliMuhammadAli'>
             <img
               className='channel-picture'
+              draggable={false}
               src='images/channels/ali-mohamed.jpg'
             />
 
@@ -66,6 +72,7 @@ function Sidebar() {
           <a className='subs-info' href='https://www.youtube.com/@BrandonShep'>
             <img
               className='channel-picture'
+              draggable={false}
               src='images/channels/brandon-shepherd.jpg'
             />
 
@@ -75,6 +82,7 @@ function Sidebar() {
           <a className='subs-info' href='https://www.youtube.com/@DanKoeTalks'>
             <img
               className='channel-picture'
+              draggable={false}
               src='images/channels/dan-koe.jpg'
             />
 
@@ -86,6 +94,7 @@ function Sidebar() {
             href='https://www.youtube.com/@DroosOnline4u'>
             <img
               className='channel-picture'
+              draggable={false}
               src='images/channels/droos-online.jpg'
             />
 
@@ -95,6 +104,7 @@ function Sidebar() {
           <a className='subs-info' href='https://www.youtube.com/@vizmazen'>
             <img
               className='channel-picture'
+              draggable={false}
               src='images/channels/nerd-anchor.jpg'
             />
 

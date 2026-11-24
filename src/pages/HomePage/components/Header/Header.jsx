@@ -34,6 +34,7 @@ function Header({
         <a href='/'>
           <img
             src={`images/assets/youtube-header-${theme === 'dark' ? 'white' : 'black'}.png`}
+            draggable={false}
             className='youtube-header-icon'
           />
         </a>
