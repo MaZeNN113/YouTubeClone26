@@ -1,3 +1,34 @@
+:root {
+  /* Backgrouds */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #2e2e2e;
+  --bg-hover: rgba(69, 69, 69, 0.6);
+  --bg-overlay: rgba(15, 15, 15, 0.7);
+
+  /* Additional Backgrounds */
+  --bg-search-hover: rgba(63, 63, 63, 0.2);
+  --bg-button-hover: rgba(121, 121, 121, 0.6);
+  --bg-card-hover: rgba(121, 121, 121, 0.45);
+  --bg-tooltip: rgb(90, 90, 90);
+  --bg-duration: hsla(0, 0%, 0%, 0.55);
+
+  /* Text */
+  --text-primary: #e3e3e3;
+  --text-secondary: #9a9a9a;
+  --text-button: #f0f0f0;
+
+  /* Additional Text */
+  --text-inverse: black;
+  --text-white: white;
+
+  /* Borders */
+  --border-primary: #454545;
+  --border-secondary: #e3e3e3;
+
+  /* Effects */
+  --shadow-button: rgba(90, 90, 90, 0.6);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +47,6 @@ body {
   background-color: #0f0f0f;
 }
 
-
 /* For making all hyperlinks on subscription channels appear without the underline purple text */
 a,
 a:link,
@@ -34,7 +64,7 @@ a:active {
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   body {
     padding-left: 0;
     padding-top: 80px;
