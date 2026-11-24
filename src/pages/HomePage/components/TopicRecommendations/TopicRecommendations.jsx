@@ -2,7 +2,7 @@ import { recommendations } from '../../../../data/recommendations.js';
 import TopicCard from './TopicCard.jsx';
 import './TopicRecommendations.css';
 
-function TopicRecommendations({ handleTopic, selectedTopic, userScrollDown }) {
+function TopicRecommendations({ userScrollDown }) {
   return (
     <div
       className={`topic-recommendations ${userScrollDown ? 'hide-topics' : ''}`}>
@@ -23,12 +23,7 @@ function TopicRecommendations({ handleTopic, selectedTopic, userScrollDown }) {
 
       {recommendations.map((recommendation) => {
         return (
-          <TopicCard
-            key={recommendation.id}
-            recommendation={recommendation}
-            handleTopic={handleTopic}
-            selectedTopic={selectedTopic}
-          />
+          <TopicCard key={recommendation.id} recommendation={recommendation} />
         );
       })}
     </div>

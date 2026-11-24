@@ -1,4 +1,9 @@
-function TopicCard({ recommendation, handleTopic, selectedTopic }) {
+import { useContext } from 'react';
+import { TopicContext } from '../../../../context/TopicContext';
+
+function TopicCard({ recommendation }) {
+  const { selectedTopic, handleTopic } = useContext(TopicContext);
+
   return (
     <div className='topic-link'>
       <button

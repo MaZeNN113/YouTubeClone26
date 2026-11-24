@@ -4,6 +4,7 @@ import VideoGrid from './components/VideoGrid/VideoGrid.jsx';
 import Header from './components/Header/Header.jsx';
 import Sidebar from './components/Sidebar/Sidebar.jsx';
 import { useState, useEffect } from 'react';
+import { TopicContext } from '../../context/TopicContext';
 import { videos } from '../../data/videos.js';
 
 function HomePage() {
@@ -110,11 +111,9 @@ function HomePage() {
         handleInput={handleInput}
         userScrollDown={userScrollDown}
       />
-      <TopicRecommendations
-        selectedTopic={selectedTopic}
-        handleTopic={handleTopic}
-        userScrollDown={userScrollDown}
-      />
+      <TopicContext.Provider value={{ selectedTopic, handleTopic }}>
+        <TopicRecommendations userScrollDown={userScrollDown} />
+      </TopicContext.Provider>
       <Sidebar />
       <VideoGrid videos={filteredVideos} />
     </>
