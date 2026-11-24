@@ -8,7 +8,7 @@ function App() {
       <Router>
         {/* <Header /> */}
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/home' element={<HomePage />} />
           {/* <Route path='/watch' element={<h1 style={{color: 'var(--text-primary)'}}> This is watch page </h1>} /> */}
           <Route
             path='*'
