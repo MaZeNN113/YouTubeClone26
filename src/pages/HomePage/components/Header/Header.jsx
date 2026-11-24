@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import './Header.css';
 
-function Header({ searchVideos, handleInput, userScrollDown }) {
+function Header({
+  searchVideos,
+  handleInput,
+  userScrollDown,
+  theme,
+  toggleTheme,
+}) {
   const [isMobileSearch, setIsMobileSearch] = useState(false);
 
   return (
@@ -12,7 +18,7 @@ function Header({ searchVideos, handleInput, userScrollDown }) {
 
         <a href='index.html'>
           <img
-            src='images/assets/youtube-header.png'
+            src={`images/assets/youtube-header-${theme === 'dark' ? 'white' : 'black'}.png`}
             className='youtube-header-icon'
           />
         </a>
@@ -124,16 +130,16 @@ function Header({ searchVideos, handleInput, userScrollDown }) {
           <div className='tooltip'>Notifications</div>
         </button>
 
-        <div className='dark-mode-button'>
+        <button className='dark-mode-button' onClick={toggleTheme}>
           <svg
             className='dark-mode-icon'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
-            <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" id="svgrepo-309493-3"></path>
+            <path
+              d='M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z'
+              id='svgrepo-309493-3'></path>
           </svg>
-
-          <div className='tooltip'>Enable Dark Mode</div>
-        </div>
+        </button>
 
         <div className='account-container'>
           <img

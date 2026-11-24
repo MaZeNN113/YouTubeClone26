@@ -1,4 +1,5 @@
-:root {
+:root,
+[theme='dark'] {
   /* Backgrouds */
   --bg-primary: #0f0f0f;
   --bg-secondary: #2e2e2e;
@@ -16,6 +17,7 @@
   --text-primary: #e3e3e3;
   --text-secondary: #9a9a9a;
   --text-button: #f0f0f0;
+  --text-tooltip: #e3e3e3;
 
   /* Additional Text */
   --text-inverse: black;
@@ -27,6 +29,38 @@
 
   /* Effects */
   --shadow-button: rgba(90, 90, 90, 0.6);
+}
+
+[theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f2f2f2;
+  --bg-hover: rgba(0, 0, 0, 0.06);
+  --bg-overlay: rgba(255, 255, 255, 0.85);
+
+  /* Text */
+  --text-primary: #0f0f0f;
+  --text-secondary: #606060;
+  --text-button: #0f0f0f;
+  --text-tooltip: #e3e3e3;
+
+  /* Borders */
+  --border-primary: #cccccc;
+  --border-secondary: #0f0f0f;
+
+  /* Effects */
+  --shadow-button: rgba(0, 0, 0, 0.15);
+
+  /* Additional Backgrounds */
+  --bg-search-hover: rgba(0, 0, 0, 0.04);
+  --bg-button-hover: rgba(0, 0, 0, 0.12);
+  --bg-card-hover: rgba(0, 0, 0, 0.08);
+  --bg-tooltip: #616161;
+  --bg-duration: rgba(0, 0, 0, 0.65);
+
+  /* Additional Text */
+  --text-inverse: white;
+  --text-white: white;
 }
 
 * {
@@ -44,7 +78,7 @@ body {
   font-size: 1rem;
   padding-top: 110px;
   padding-left: 90px;
-  background-color: #0f0f0f;
+  background-color: var(--bg-primary);
 }
 
 /* For making all hyperlinks on subscription channels appear without the underline purple text */

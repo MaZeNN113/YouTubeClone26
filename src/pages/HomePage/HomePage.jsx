@@ -12,6 +12,18 @@ function HomePage() {
   const [draftQuery, setDraftQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([...videos]);
   const [selectedTopic, setSelectedTopic] = useState('All');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
+
+  function toggleTheme() {
+    setTheme((prevTheme) =>  prevTheme === 'dark' ? 'light' : 'dark');
+  }
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+    document.documentElement.setAttribute('theme', theme);
+  }, [theme]);
 
   // Adding states to track scroll behaviour
   const [userScrollDown, setUserScrollDown] = useState(false);
@@ -110,6 +122,8 @@ function HomePage() {
         searchVideos={searchVideos}
         handleInput={handleInput}
         userScrollDown={userScrollDown}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
       <TopicContext.Provider value={{ selectedTopic, handleTopic }}>
         <TopicRecommendations userScrollDown={userScrollDown} />
