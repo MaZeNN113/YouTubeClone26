@@ -224,7 +224,8 @@ header {
   background-color: var(--bg-button-hover);
 }
 
-.notifications-icon {
+.notifications-icon,
+.dark-mode-icon {
   height: 2.8125rem;
   width: 2.8125rem;
   fill: var(--text-primary);
@@ -234,20 +235,25 @@ header {
   transition: background-color 0.3s;
 }
 
-.notifications-icon:hover {
+.notifications-icon:hover,
+.dark-mode-icon:hover {
   background-color: var(--bg-hover);
 }
 
-.notifications-container {
+.notifications-button,
+.dark-mode-button {
   display: inline-flex;
   position: relative;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   border-radius: 70px;
+  border: none;
+  background-color: transparent;
 }
 
-.notifications-container .tooltip {
+.notifications-button .tooltip,
+.dark-mode-button .tooltip {
   position: absolute;
   background-color: var(--bg-tooltip);
   color: var(--text-primary);
@@ -262,7 +268,8 @@ header {
   transition: opacity 0.3s;
 }
 
-.notifications-container:hover .tooltip,
+.notifications-button:hover .tooltip,
+.dark-mode-button:hover .tooltip,
 .account-container:hover .tooltip {
   opacity: 1;
 }
@@ -460,7 +467,7 @@ header {
     background-color: var(--bg-hover);
   }
 
-  .notifications-container .tooltip,
+  .notifications-button .tooltip,
   .account-container .tooltip {
     opacity: 0;
     display: none;
@@ -515,7 +522,7 @@ header {
   .search-box,
   .ai-ask-button,
   .create-button,
-  .notifications-container,
+  .notifications-button,
   .account-container {
     display: none;
   }

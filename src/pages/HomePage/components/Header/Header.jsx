@@ -113,7 +113,7 @@ function Header({ searchVideos, handleInput, userScrollDown }) {
           Create
         </button>
 
-        <div className='notifications-container'>
+        <button className='notifications-button'>
           <svg
             className='notifications-icon'
             xmlns='http://www.w3.org/2000/svg'
@@ -122,6 +122,17 @@ function Header({ searchVideos, handleInput, userScrollDown }) {
           </svg>
 
           <div className='tooltip'>Notifications</div>
+        </button>
+
+        <div className='dark-mode-button'>
+          <svg
+            className='dark-mode-icon'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'>
+            <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" id="svgrepo-309493-3"></path>
+          </svg>
+
+          <div className='tooltip'>Enable Dark Mode</div>
         </div>
 
         <div className='account-container'>
