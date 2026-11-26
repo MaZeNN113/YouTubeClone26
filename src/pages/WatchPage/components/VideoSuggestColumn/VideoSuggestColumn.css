@@ -11,6 +11,10 @@
   border-radius: 20px;
   transition: background-color 0.4s;
   cursor: pointer;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
 }
 
 .watch-page .video-preview:hover {
@@ -30,6 +34,11 @@
   display: block;
   flex: 0 0 45%;
   margin-right: 1rem;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
 }
 
 .watch-page .video-time {
@@ -67,7 +76,7 @@
   margin-right: 0.625rem;
   flex-shrink: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     display: none;
   }
 }
