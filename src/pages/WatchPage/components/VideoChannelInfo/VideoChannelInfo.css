@@ -1,0 +1,167 @@
+/* The title of the video */
+.video-watch-title {
+  color: var(--text-primary);
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  font-weight: bold;
+  margin: 1rem 0 1rem 1rem;
+}
+
+/* This contains ALL the elements, such the channel info and buttons */
+.video-watch-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* This contains all the elements that are related to the channel, like the pic, subscribers and subscribe btn */
+.video-watch-channel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* Handling the channel pic */
+.video-watch-info .video-watch-channel-picture-contaiener {
+  margin-right: 0.5rem;
+}
+
+.video-watch-channel-info {
+  margin-right: 0.5rem;
+}
+
+/* Channel Name */
+.video-channel-name {
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Channel Subscribers */
+.video-watch-channel-subscribers {
+  color: var(--text-secondary);
+  font-size: 0.625rem;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: black;
+  padding: 5px 10px;
+  background-color: var(--text-button);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* ==== VIDEO BTNS ===== */
+/* ===================== */
+
+.video-watch-btns,
+.like-dislike-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watch-btn {
+  pointer-events: none;
+  display: inherit;
+  height: 15px;
+  fill: var(--text-primary);
+}
+
+.like-dislike-btns {
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.like-btn,
+.dislike-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.like-btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.like-btn p {
+  font-size: 0.8rem;
+  color: var(--text-button);
+  font-weight: 400;
+  color: var(--text-button)
+}
+
+.like-btn::after {
+  content: '';
+  height: 15px;
+  width: 1px;
+  background-color: #fffcfc;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.share-btn,
+.download-btn,
+.save-btn,
+.more-btn {
+  margin-right: 10px;
+  background-color: var(--bg-secondary);
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .save-btn {
+    display: none;
+  }
+
+  .like-dislike-btns {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .like-btn p,
+  .like-btn::after,
+  .video-watch-channel-subscribers {
+    display: none;
+  }
+
+  .like-btn {
+    height: 24px;
+  }
+
+  .like-btn,
+  .dislike-btn,
+  .share-btn,
+  .download-btn,
+  .more-btn {
+    margin-right: 5px;
+    background-color: var(--bg-secondary);
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .video-channel-name {
+    margin: 0;
+  }
+}
