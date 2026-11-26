@@ -1,36 +1,38 @@
 .videos-column {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 /* This below contains the thumbnail + all the rest info, like channel picture, title and stats */
-.video-preview {
-  display: block;
+.watch-page .video-preview {
+  display: flex;
   padding: 0.9375rem;
   border-radius: 20px;
   transition: background-color 0.4s;
   cursor: pointer;
 }
 
-.video-preview:hover {
+.watch-page .video-preview:hover {
   background-color: var(--bg-card-hover);
 }
 
 /* This below contains the thumbnail image */
-.thumbnail {
+.watch-page .thumbnail {
   width: 100%;
-  height: auto;
   display: block;
   border-radius: 15px;
-  margin-bottom: 1.25rem;
+  margin: 0;
 }
 
-.thumbnail-container {
+.watch-page .thumbnail-container {
   position: relative;
   display: block;
+  flex: 0 0 45%;
+  margin-right: 1rem;
 }
 
-.video-time {
+.watch-page .video-time {
   position: absolute;
   color: var(--text-white);
   background-color: var(--bg-duration);
@@ -44,30 +46,34 @@
 }
 
 /* This below contains 'ALL' the nested layouts such as the channel picture, video title, and the stats together with their nested layouts. I've created it to make them vertically centered */
-.info-container {
+.watch-page .info-container {
   display: flex;
   gap: 0.625rem;
   vertical-align: top;
 }
 
 /* These 2 below: 1st one is for the channel picture itself as an image, while the 2nd one is for the container of the image block to make it inline with the content */
-.channel-pic {
+.watch-page .channel-pic {
   width: 2.5rem;
   height: 2.5rem;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.channel-pic-container {
+.watch-page .channel-pic-container {
   display: flex;
   width: 2.5rem;
   height: 2.5rem;
   margin-right: 0.625rem;
   flex-shrink: 0;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 /* Video Title */
-.video-title {
+.watch-page .video-title {
   color: var(--text-primary);
   font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
   font-weight: bold;
@@ -75,7 +81,7 @@
 }
 
 /* Video Stats includes the channel name, video view and when it had been published */
-.video-stats {
+.watch-page .video-stats {
   color: var(--text-secondary);
   font-size: 0.875rem;
   font-weight: 500;
@@ -83,7 +89,7 @@
 }
 
 /* video-info covers all the 'video-title','video-stats' and 'three-dots' so they can appear together */
-.video-info {
+.watch-page .video-info {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -92,7 +98,7 @@
   align-content: start;
 }
 
-.video-title-and-stats {
+.watch-page .video-title-and-stats {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -103,7 +109,7 @@
 /* ==== DOTS BUTTON ==== */
 /* ===================== */
 
-.dots-button {
+.watch-page .dots-button {
   align-self: flex-start;
   flex-shrink: 0;
   background-color: transparent;
@@ -113,7 +119,7 @@
   line-height: 0;
 }
 
-.dots-icon {
+.watch-page .dots-icon {
   width: 1.5rem;
   height: 1.5rem;
   display: block;
@@ -123,13 +129,4 @@
 /* ===================== */
 /* ==== Column Style === */
 /* ===================== */
-.video-watch {
-  flex: 3 1 0;
-  margin: 0;
-}
 
-.youtube-video {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 30px;
-}
