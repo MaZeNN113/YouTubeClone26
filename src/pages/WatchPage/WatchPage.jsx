@@ -3,11 +3,11 @@ import VideoSuggestColumn from './components/VideoSuggestColumn/VideoSuggestColu
 
 function WatchPage() {
   return (
-    <div className='video-suggestions'>
+    <div className='watch-page'>
       <div className='video-watch'>
         <div className='video-watch-container'>
           <iframe
-            class='youtube-video'
+            className='youtube-video'
             frameBorder={0}
             title='NLM embedded YouTube video player example'
             src='https://www.youtube.com/embed/GQigLJ6iV4Y?html5=1&enablejsapi=1'
