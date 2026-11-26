@@ -1,0 +1,137 @@
+.videos-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* This below contains the thumbnail + all the rest info, like channel picture, title and stats */
+.video-preview {
+  display: block;
+  padding: 0.9375rem;
+  border-radius: 20px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+
+.video-preview:hover {
+  background-color: var(--bg-card-hover);
+}
+
+/* This below contains the thumbnail image */
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  margin-bottom: 1.25rem;
+}
+
+.thumbnail-container {
+  position: relative;
+  display: block;
+}
+
+.video-time {
+  position: absolute;
+  color: var(--text-white);
+  background-color: var(--bg-duration);
+  backdrop-filter: blur(5px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 5px 7px;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* This below contains 'ALL' the nested layouts such as the channel picture, video title, and the stats together with their nested layouts. I've created it to make them vertically centered */
+.info-container {
+  display: flex;
+  gap: 0.625rem;
+  vertical-align: top;
+}
+
+/* These 2 below: 1st one is for the channel picture itself as an image, while the 2nd one is for the container of the image block to make it inline with the content */
+.channel-pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.channel-pic-container {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.625rem;
+  flex-shrink: 0;
+}
+
+/* Video Title */
+.video-title {
+  color: var(--text-primary);
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem);
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+
+/* Video Stats includes the channel name, video view and when it had been published */
+.video-stats {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+/* video-info covers all the 'video-title','video-stats' and 'three-dots' so they can appear together */
+.video-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  align-content: start;
+}
+
+.video-title-and-stats {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== */
+/* ==== DOTS BUTTON ==== */
+/* ===================== */
+
+.dots-button {
+  align-self: flex-start;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.dots-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  fill: var(--text-primary);
+}
+
+/* ===================== */
+/* ==== Column Style === */
+/* ===================== */
+.video-watch {
+  flex: 1;
+  margin: 0;
+}
+
+.youtube-video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 30px;
+  padding: 30px;
+}

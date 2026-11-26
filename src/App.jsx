@@ -1,5 +1,6 @@
 import { HashRouter as Router, Routes, Route } from 'react-router';
 import HomePage from './pages/HomePage/HomePage';
+import WatchPage from './pages/WatchPage/WatchPage';
 // import Header from './pages/HomePage/components/Header/Header'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         {/* <Header /> */}
         <Routes>
           <Route path='/' element={<HomePage />} />
-          {/* <Route path='/watch' element={<h1 style={{color: 'var(--text-primary)'}}> This is watch page </h1>} /> */}
+          <Route path='/watch' element={<WatchPage />} />
           <Route
             path='*'
             element={
