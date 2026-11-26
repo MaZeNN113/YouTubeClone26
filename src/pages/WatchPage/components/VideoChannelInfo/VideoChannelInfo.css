@@ -107,8 +107,8 @@
 .like-btn::after {
   content: '';
   height: 15px;
-  width: 1px;
-  background-color: #fffcfc;
+  width: 0.5px;
+  background-color: var(--text-secondary);
   margin-left: 10px;
   margin-right: 10px;
 }
