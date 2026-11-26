@@ -5,7 +5,7 @@ main {
   gap: 2rem 1rem;
   row-gap: 3.125rem;
   padding: 1.5rem;
-  padding-left: 90;
+  padding-left: 90px;
   max-width: 100rem;
   margin: 0 auto;
 }
