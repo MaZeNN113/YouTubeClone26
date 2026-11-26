@@ -1,9 +1,10 @@
 .watch-page {
   display: flex;
-  gap: 2rem 1rem;
+  gap: 1rem;
   row-gap: 3.125rem;
   padding: 1.5rem;
   margin: 0 auto;
+  background-color: var(--bg-primary);
 
   @media (max-width: 768px) {
     flex-direction: column;
